@@ -90,3 +90,16 @@ When attached to a [TMP_Dropdown](https://docs.unity3d.com/Packages/com.unity.te
 <div style="text-align:left">
     <img style="padding:25px 0" src="~/images/components/screensharesources.png" width="300px">
 </div>
+
+### Video
+#### Video controller
+
+When attached to a GameObject with a mesh render and a mesh filter, allows video to be rendering onto its surface
+
+| Name | Type | Description |
+|--|:--|:--|
+| **Filter By** | Enum | The type of the filter used for the display. |
+| **Filter** | String | The value of the filter. |
+| **Is Local** | Bool | A boolean to determine whether to display local or remote video. |
+| **Is Screen Share** | Bool | A boolean that determines whether to display screenshare. |
+

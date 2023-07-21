@@ -8,6 +8,8 @@
 
 - name: Components
   href: components/index.md
+- name: Tutorial
+  href: tutorial/tutorial.md
 - name: Visual Scripting
   href: visualscripting/nodes.md
   items:
