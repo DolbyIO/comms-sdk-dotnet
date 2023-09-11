@@ -13,7 +13,7 @@ namespace DolbyIO.Comms
 
         protected override bool ReleaseHandle()
         {
-            return Native.DeleteVideoSink(handle);
+            return Native.DeleteVideoFrameHandler(handle);
         }
     }
 }

@@ -8,12 +8,11 @@ namespace dolbyio::comms::native {
 class video_frame_handler : public dolbyio::comms::video_frame_handler {
 public:
   void sink(video_sink* sink) {
-    // Aliasing constructor
-    _sink = std::shared_ptr<dolbyio::comms::native::video_sink>(std::shared_ptr<dolbyio::comms::native::video_sink>{}, sink);
+    _sink = sink;
   }
 
   virtual std::shared_ptr<dolbyio::comms::video_sink> sink() {
-    return _sink;
+    return std::shared_ptr<dolbyio::comms::video_sink>(_sink, null_deleter{});
   }
 
   virtual std::shared_ptr<dolbyio::comms::video_source> source() {
@@ -21,7 +20,7 @@ public:
   }
 
 private:
-  std::shared_ptr<dolbyio::comms::native::video_sink> _sink;
+  dolbyio::comms::native::video_sink* _sink;
 };
 
 } // namespace dolbyio::comms::native
